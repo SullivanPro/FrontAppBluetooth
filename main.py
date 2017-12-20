@@ -10,10 +10,10 @@ from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from kivy.lang import Builder
 import json
 
-class MainPage(Screen, BoxLayout):
+class MainPage(Screen):
     pass
 
-class ClientPage(Screen, GridLayout, Label):
+class ClientPage(Screen):
     def got_json(req):
         result = UrlRequest('https://jsonplaceholder.typicode.com/posts')
         bit = json.loads(result)
