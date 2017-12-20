@@ -1,0 +1,39 @@
+#: import FadeTransition kivy.uix.screenmanager.FadeTransition
+
+ScreenManagement:
+    transition: FadeTransition()
+    MainPage:
+    ClientPage:
+
+
+<Button>:
+    size_hint: 0.3, 0.1
+
+<MainPage>:
+    name: "main"
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+        Button:
+            on_release: app.root.current = "client"
+            text: "Client"
+            font_size: 30
+        Button:
+            text: "Promotion"
+            font_size: 30
+        Button:
+            text: "Visite"
+            font_size: 30
+        Button:
+            text: "Catégorie"
+            font_size: 30
+
+<ClientPage>:
+    name: "client"
+    Label:
+        text: "test"
+    Button:
+        on_release: app.root.current = "main"
+        text: "Retourner sur l'accueil"
+        font_size: 20
